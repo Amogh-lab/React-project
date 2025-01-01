@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main {
+  padding: 0px;
+  text-align: center;
+}
+
+.input-section {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.cityInput {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+h4, h5 {
+  margin: 10px 0;
+}
+
+h1 {
+  margin: 10px 0;
+}
+/* Style for the text box container */
+/* Container for input and button */
+.input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between the input and button */
+  padding: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Style for the input box */
+.cityInput {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect when the input is selected */
+.cityInput:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+/* Style for the search button */
+#searchBtn {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+#searchBtn:hover {
+  background-color: #45a049;
+}
+
+/* Style for the button when it's active */
+#searchBtn:active {
+  background-color: #388e3c;
+}
