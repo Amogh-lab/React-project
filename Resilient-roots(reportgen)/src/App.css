@@ -1,0 +1,108 @@
+
+* {
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  width: 100%;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #627E5D;
+  margin-top: 20px;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 20px auto;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #627E5D;
+  border-radius: 5px;
+}
+
+button {
+  align-items: center;
+  display: block;
+  background-color: #66dd51;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #019587;
+}
+
+p {
+  text-align: center;
+  font-size: 22px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #72a868;
+  margin-top: 20px;
+}
+
+p.error {
+  color: #ff4d4d;
+}
+
+p.loading {
+  color: #8CE17D;
+}
+/* Style the container for the file input */
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Hide the default file input */
+.file-input-container input[type="file"] {
+  display: none;
+}
+
+/* Style the custom label for the file input */
+.file-input-label {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fff;
+  background-color: #66dd51; /* Match your theme */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  align-items: center;
+}
+
+/* Hover effect for the custom label */
+.file-input-label:hover {
+  background-color: #019587; /* Darker green for hover */
+}
+
+/* Display the selected file name below the button */
+.file-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
