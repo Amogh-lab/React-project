@@ -1,153 +1,188 @@
+/* Base styles for dark mode */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input, button {
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+/* Input Section */
 .input {
-    display: flex;
+  display: flex;
+  width: 90%;
+  max-width: 500px;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.input__box {
+  flex-grow: 1;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 12px 20px;
+  color: #e0e0e0;
+  font-size: 18px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.input__box:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  background-color: #444;
+}
+
+.input_submit {
+  width: 60px;
+  height: 45px;
+  margin-left: 15px;
+  background-color: #ff9800;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s ease, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.input_submit:hover {
+  background-color: #d47f00;
+}
+
+.input_submit:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for todos */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Todos Section */
+.todos {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  max-width: 500px;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.todos__heading {
+  font-size: 24px;
+  color: #f0f0f0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.todos__single {
+  display: flex;
+  background-color: #3c3c3c;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.todos__single:hover {
+  transform: scale(1.03);
+  background-color: #4e4e4e;
+}
+
+.todos__single--text {
+  flex-grow: 1;
+  color: #dcdcdc;
+  font-size: 18px;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  transition: color 0.3s ease;
+}
+
+.todos__single--text:focus {
+  color: #f0f0f0;
+}
+
+.icon {
+  color: #bdbdbd;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+  color: #ff5722;
+  transform: scale(1.1);
+}
+
+/* Draggable styles */
+.dragactive {
+  background-color: #555;
+  transition: background-color 0.3s ease;
+}
+
+.dragcomplete {
+  background-color: #f44336;
+  transition: background-color 0.3s ease;
+}
+
+.remove {
+  background-color: #ff9800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input {
+    flex-direction: column;
     width: 95%;
-    position: relative;
-    align-items: center;
+    max-width: 400px;
+    margin-bottom: 20px;
   }
-  
+
   .input__box {
     width: 100%;
-    border-radius: 50px;
-    padding: 20px 30px;
-    font-size: 25px;
-    border: none;
-    transition: 0.2s;
-    box-shadow: inset 0 0 5px black;
+    margin-bottom: 10px;
   }
-  
-  .input__box:focus {
-    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
-    outline: none;
-  }
-  
+
   .input_submit {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin: 12px;
-    border-radius: 50px;
-    right: 0px;
-    border: none;
-    font-size: 15px;
-    background-color: #2f74c0;
-    color: white;
-    transition: 0.2s all;
-    box-shadow: 0 0 10px black;
+    width: 40px;
+    height: 40px;
+    margin-left: 0;
   }
-  
-  .input_submit:hover {
-    background-color: #388ae2;
-  }
-  
-  .input_submit:active {
-    transform: scale(0.8);
-    box-shadow: 0 0 5px black;
-  }
-  
+
   .container {
-    width: 95%;
-    display: flex;
-    margin-top: 10px;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .todos {
-    border-radius: 5px;
-    display: flex;
     flex-direction: column;
-    width: 47.5%;
-    padding: 15px;
-    background-color: rgb(50, 195, 205);
+    align-items: center;
   }
-  
-  .dragactive {
-    background-color: rgb(0, 221, 236);
-    transition: background-color 0.3s ease;
+
+  .todos {
+    width: 95%;
+    max-width: 400px;
   }
-  
-  .dragcomplete {
-    background-color: rgb(255, 38, 0);
-    transition: background-color 0.3s ease;
-  }
-  
-  .remove {
-    background-color: rgb(235, 103, 80);
-  }
-  
-  .todos__heading {
-    font-size: 30px;
-    color: white;
-  }
-  
-  .todos__single {
-    display: flex;
-    border-radius: 5px;
-    padding: 20px;
-    margin-top: 15px;
-    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .drag {
-    box-shadow: 0 0 20px black;
-    transform: scale(1.02);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .todos__single:hover {
-    box-shadow: 0 0 5px black;
-    transform: scale(1.03);
-  }
-  
-  .todos__single--text {
-    flex: 1;
-    padding: 5px;
-    border: none;
-    font-size: clamp(16px, 2.5vw, 20px);
-  }
-  
-  .todos__single--text:focus {
-    outline: none;
-  }
-  
-  .icon {
-    margin-left: 10px;
-    font-size: 25px;
-    cursor: pointer;
-    transition: transform 0.2s ease, color 0.2s ease;
-  }
-  
-  .icon:hover {
-    color: #1a73e8;
-    transform: scale(1.1);
-  }
-  
-  @media (max-width: 1100px) {
-    .todos {
-      width: 45%;
-    }
-  }
-  
-  @media (max-width: 700px) {
-    .input {
-      width: 95%;
-    }
-    .container {
-      width: 95%;
-      flex-direction: column;
-    }
-    .todos {
-      width: 95%;
-      margin-bottom: 10px;
-    }
-  }
-  .draggable {
-    user-select: none;
-    padding: 16px;
-    margin: 0 0 8px 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-  }
+}
+
