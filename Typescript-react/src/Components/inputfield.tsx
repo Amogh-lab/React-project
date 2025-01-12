@@ -1,22 +1,36 @@
-import "./inputbox.css"
+import React, { useRef } from "react";
+import "./inputbox.css";
+
 interface props {
   todo: string;
-  setTodo: React.Dispatch<React.SetStateAction<string>>;           //todo is a string used for storing todo list and setTodo is the function for it
-  handleAdd: (e : React.FormEvent) => void
+  setTodo: React.Dispatch<React.SetStateAction<string>>;
+  handleAdd: (e: React.FormEvent) => void;
 }
-//typedeff for todo and setTodo using interface
 
-const inputfield = ({todo, setTodo, handleAdd}: props) => {                   //const inputfield: React.FC<props>= ({todo, setTodo}) instead we can also use this
- return (
-    <form className="Inputlist" onSubmit={handleAdd}>
+const Inputfield: React.FC<props> = ({ todo, setTodo, handleAdd }) => {
+  const inputRef = useRef<HTMLInputElement>(null);
 
-        <input value={todo} 
-        onChange={(e) => setTodo(e.target.value)}                     //taking string input from the input box e-event 
-        type='input' placeholder="Task to do" 
-        className="Todobox"/>  
-        <button className='todobutton'>Enter</button>
+  return (
+    <form
+      className="input"
+      onSubmit={(e) => {
+        handleAdd(e);
+        inputRef.current?.blur();
+      }}
+    >
+      <input
+        type="text"
+        placeholder="Enter a Task"
+        value={todo}
+        ref={inputRef}
+        onChange={(e) => setTodo(e.target.value)}
+        className="input__box"
+      />
+      <button type="submit" className="input_submit">
+        GO
+      </button>
     </form>
-  )
-}
+  );
+};
 
-export default inputfield;
+export default Inputfield;
