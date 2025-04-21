@@ -21,11 +21,3 @@ Before running this project, ensure you have the following installed:
 
 1. **Node.js**: The runtime used to execute JavaScript outside the browser.
 2. **npm**: A package manager for JavaScript, which comes with Node.js.
-
-You can check if you have Node.js and npm installed by running the following commands in your terminal:
-
-```bash
-node -v
-npm -v
-
-
