@@ -43,7 +43,7 @@ const App: React.FC = () => {
     } else {
       add = complete[source.index];
       complete.splice(source.index, 1);
-    }
+    }    
 
     if (destination.droppableId === "TodosList") {
       active.splice(destination.index, 0, add);

@@ -1,0 +1,43 @@
+.nutrition-wrapper {
+    margin: 2rem auto;
+    width: 80%;
+    background-color: #fcebd9;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(102, 23, 23, 0.2);
+  }
+  
+  .nutrition-title {
+    text-align: center;
+    color: rgb(102, 23, 23);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .nutrition-table th,
+  .nutrition-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #c9b8a4;
+  }
+  
+  .nutrition-table th {
+    background-color: rgb(230, 210, 185);
+    color: rgb(102, 23, 23);
+    font-size: 1.2rem;
+  }
+  
+  .nutrition-table td {
+    color: #5a3c2e;
+    font-size: 1rem;
+  }
+  
+  .nutrition-table tr:hover {
+    background-color: #e2d6ca;
+  }
+  

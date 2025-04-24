@@ -1,0 +1,49 @@
+.division {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.heading {
+  text-align: center;
+  color: rgb(102, 23, 23);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.cardset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cards {
+  background-color: rgb(230, 210, 185);
+  border-radius: 20px;
+  width: 320px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.cards:hover {
+  transform: translateY(-5px);
+}
+
+.hello {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(150, 78, 27);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.para {
+  font-size: 1rem;
+  font-weight: 400;
+  color: chocolate;
+  text-align: center;
+}
